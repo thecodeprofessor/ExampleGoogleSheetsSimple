@@ -86,3 +86,13 @@ foreach (var pet in sheet)
     Console.WriteLine($"{pet.Name}\t{pet.Species}\t{pet.Age}\t{pet.Price}\t{pet.Color}");
 }
 ```
+
+## Important Notes
+Ensure that your Google Sheet is empty before calling LoadAsync for the first time to allow proper initialization of headings.
+The program outputs warnings if credentials.json is found in the project directory and reminds you to avoid committing it to source control.
+
+## Error Handling
+The program includes error handling for incorrect data types in the Google Sheet. If an invalid value is encountered during data loading, an error message will be displayed, identifying the problematic row and primary key. You can correct the data in the Google Sheet and restart the program.
+
+## License
+This program is for educational purposes and is provided as-is. Ensure that you follow best practices for securing sensitive information such as API credentials.
